@@ -3,7 +3,8 @@
 {
   const dia = "<img src='images/dia.jpg' width='100px' height='150px'>"
   const spade = "<img src='images/spade.jpg' width='130px' height='130px'>"
-  const cards = [dia, spade, dia, spade, dia, spade];
+  const heart = "<img src='images/ht.jpg' width='130px' height='130px'>"
+  const cards = [dia, spade, dia, spade, heart, heart];
   const ca = document.getElementById('ca');
   const cardFlip = document.querySelector('.cardflip');
   // uracard.style.display = 'none'; ←ここでエラー出てた。
@@ -25,28 +26,35 @@
     }
 
     // 画像をランダムに取得して返す
-    const getImage = function() {
-      const randoms = [];
-      for(n = 0; n <= cards.length; n++){
-        while(true){
-          const ran = Math.floor(Math.random() * cards.length);
-          if(!randoms.includes(ran)){
-            randoms.push(ran);
-            break;
-          }
-        }
-      }
-      const select = cards[ran];
-      console.log(select);
-      return select;
-    };
-
-    getImage();
+    
     
     // 取得した画像データをpre属性を持つ要素へ付与する
     for (let i = 0; i <= card.length - 1; i++) {
       console.log(card.item(i));
       card[i].addEventListener("click", function() {
+
+        const getImage = function() {
+          const randoms = [];
+          for (let n = 0; n <= cards.lenth; n++){
+            while(true){
+              const ran = Math.floor(Math.random() * cards.length);
+              if(!randoms.includes(ran)){
+                randoms.push(ran);
+                const select = cards[ran];
+                console.log(ran);
+                return select;
+                break;
+              }
+            }
+          }
+          // const select = cards[ran];
+          // console.log(select);
+          // return select;
+        };
+    
+        // getImage();
+
+
         　　　// cardflipクラスの追加と削除
         　　　// thisは、クリックされたオブジェクト
         　　　this.classList.add('cardflip');
