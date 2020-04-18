@@ -1,0 +1,50 @@
+
+
+section {
+  margin: 10px 0;
+}
+
+.pre {
+  opacity: 0.6;
+}
+
+.card {
+  background-image: url(images/tranp_back.png);
+  opacity: 1;
+}
+
+.cardflip {
+  display: inline-block;
+  padding: 0;
+  transform: rotateX(360deg);
+  transition: 1s;
+}
+
+.button {
+  position: relative;
+}
+
+.startbutton {
+  border: 2px solid black;
+  display: inline-block;
+  padding: 0 80px;
+  margin: 0 auto;
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  background-color: pink;
+  border-radius: 40px;
+  box-shadow: 8px 4px black;
+}
+
+.startbutton:active {
+  box-shadow: 5px 3px black;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.startbutton:hover {
+  opacity: 0.8;
+}
+
+  
