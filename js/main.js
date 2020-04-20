@@ -35,7 +35,8 @@
 
         const getImage = function() {
           const randoms = [];
-          for (let n = 0; n <= cards.lenth; n++){
+          // ここでlengthのスペルミスがあり画像が表示されなかった。
+          for (let n = 0; n <= cards.length; n++){
             while(true){
               const ran = Math.floor(Math.random() * cards.length);
               if(!randoms.includes(ran)){
